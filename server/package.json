@@ -1,0 +1,22 @@
+{
+  "name": "graphql_server",
+  "version": "1.0.0",
+  "description": "graphql server for nodejs bookstore application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "graphql",
+    "apollo",
+    "react",
+    "node",
+    "express",
+    "mongodb"
+  ],
+  "author": "Luke <mugapedia@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
