@@ -12,7 +12,10 @@ const {
 const books = [
   { id: "1", name: "High Performance JavaScript", genre: "Scalability", authorID: "1"},
   { id: "2", name: "Angles and Demons", genre: "Science Fiction", authorID: "2"},
-  { id: "3", name: "Code Complete", genre: "Software Engineering", authorID: "3"}
+  { id: "3", name: "Code Complete", genre: "Software Engineering", authorID: "3"},
+  { id: "4", name: "Da Vince Code", genre: "Fantasy", authorID: "2"},
+  { id: "5", name: "The Lost Symbol", genre: "Science Fictionm", authorID: "2"},
+  { id: "6", name: "Clean Code", genre: "Software Engineering", authorID: "3"}
 ]
 
 const authors = [
