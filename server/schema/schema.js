@@ -10,9 +10,9 @@ const {
 } = graphql;
 
 const books = [
-  { id: "1", name: "High Performance JavaScript", genre: "Scalability"},
-  { id: "2", name: "Angles and Demons", genre: "Science Fiction"},
-  { id: "3", name: "Code Complete", genre: "Software Engineering"}
+  { id: "1", name: "High Performance JavaScript", genre: "Scalability", authorID: "1"},
+  { id: "2", name: "Angles and Demons", genre: "Science Fiction", authorID: "2"},
+  { id: "3", name: "Code Complete", genre: "Software Engineering", authorID: "3"}
 ]
 
 const authors = [
