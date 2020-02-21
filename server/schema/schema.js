@@ -9,6 +9,12 @@ const books = [
   { id: "3", name: "Code Complete", genre: "Software Engineering"}
 ]
 
+const authors = [
+  { id: "1", surname: "Zakas", titles: 4 },
+  { id: "2", surname: "Brown", titles: 3 },
+  { id: "3", surname: "Potter", titles: 9 }
+]
+
 const BookType = new GraphQLObjectType({
   name: 'Book',
   fields: () => ({
