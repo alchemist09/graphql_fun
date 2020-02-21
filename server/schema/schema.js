@@ -2,7 +2,7 @@ const graphql = require('graphql');
 const _ = require('lodash');
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb://graphql_user:password1@ds033754.mlab.com:33754/graphql_fun");
+mongoose.connect("mongodb://graphql_user:password1@ds033754.mlab.com:33754/graphql_fun", { useNewUrlParser: true });
 mongoose.connection.once('open', () => {
   console.log("Connection to the graphql_fun DB established.....");
 })
