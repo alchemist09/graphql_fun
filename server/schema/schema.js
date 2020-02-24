@@ -110,7 +110,7 @@ const Mutation = new GraphQLObjectType({
           surname: args.surname,
           title: args.titles
         });
-        authorObj.save();
+        return authorObj.save();
       }
     }
   }
