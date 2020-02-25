@@ -108,7 +108,7 @@ const Mutation = new GraphQLObjectType({
       resolve(parent, args) {
         let authorObj = new Author({
           surname: args.surname,
-          title: args.titles
+          titles: args.titles
         });
         return authorObj.save();
       }
