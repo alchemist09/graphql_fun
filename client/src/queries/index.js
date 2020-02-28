@@ -25,7 +25,7 @@ const addBookMutation = gql`
     addBook(name: "", genre: "", authorID: "") {
       name
       genre
-      authorID
+      id
     }
   }
 `
