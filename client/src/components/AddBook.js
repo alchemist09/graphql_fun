@@ -53,8 +53,15 @@ class AddBook extends Component {
   }
 
   handleSubmit(evt) {
+    const { name, genre, authorID } = this.state;
     evt.preventDefault();
-    this.props.addBookMutation();
+    this.props.addBookMutation({
+      variables: {
+        name,
+        genre,
+        authorID
+      }
+    });
     console.log(this.state);
   }
 
