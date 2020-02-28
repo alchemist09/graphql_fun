@@ -4,7 +4,7 @@ import { getBooksQuery } from '../queries';
 
 class BookList extends Component {
 
-  dispayBooks() {
+  displayBooks() {
     const { data, error } = this.props;
     if(data.loading) {
       return (
@@ -30,7 +30,7 @@ class BookList extends Component {
     return (
       <div>
         <ul id="book-list">
-          {this.dispayBooks()}
+          {this.displayBooks()}
         </ul>
       </div>
     )
