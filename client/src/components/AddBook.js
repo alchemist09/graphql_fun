@@ -15,6 +15,7 @@ class AddBook extends Component {
     this.handleBookNameChange = this.handleBookNameChange.bind(this);
     this.handleGenreChange = this.handleGenreChange.bind(this);
     this.handleAuthorChange = this.handleAuthorChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   displayAuthors() {
@@ -50,10 +51,15 @@ class AddBook extends Component {
     })
   }
 
+  handleSubmit(evt) {
+    evt.preventDefault();
+    console.log(this.state);
+  }
+
   render() {
     console.log(this.props);
     return (
-      <form id="add-book">
+      <form id="add-book" onSubmit={this.handleSubmit}>
         <div className="field">
           <label htmlFor="name">Book Name</label>
           <input type="text" onChange={this.handleBookNameChange} />
