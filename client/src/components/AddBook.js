@@ -14,6 +14,7 @@ class AddBook extends Component {
 
     this.handleBookNameChange = this.handleBookNameChange.bind(this);
     this.handleGenreChange = this.handleGenreChange.bind(this);
+    this.handleAuthorChange = this.handleAuthorChange.bind(this);
   }
 
   displayAuthors() {
@@ -43,6 +44,12 @@ class AddBook extends Component {
     })
   }
 
+  handleAuthorChange(evt) {
+    this.setState({
+      authorID: evt.target.value
+    })
+  }
+
   render() {
     console.log(this.props);
     return (
@@ -57,7 +64,7 @@ class AddBook extends Component {
         </div>
         <div className="field">
           <label htmlFor="name">Author</label>
-          <select>
+          <select onChange={this.handleAuthorChange} value={this.state.authorID}>
             <option>Select Author</option>
             {this.displayAuthors()}
           </select>
