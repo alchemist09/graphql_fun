@@ -32,22 +32,23 @@ class AddBook extends Component {
   render() {
     console.log(this.props);
     return (
-      <form>
-        <div>
+      <form id="add-book">
+        <div className="field">
           <label htmlFor="name">Book Name</label>
           <input type="text" />
         </div>
-        <div>
+        <div className="field">
           <label htmlFor="genre">Genre</label>
           <input type="text" />
         </div>
-        <div>
+        <div className="field">
           <label htmlFor="name">Author</label>
           <select>
             <option>Select Author</option>
             {this.displayAuthors()}
           </select>
         </div>
+        <button>+</button>
       </form>
     )
   }
