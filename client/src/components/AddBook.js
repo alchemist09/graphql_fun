@@ -4,6 +4,15 @@ import { getAuthorsQuery } from '../queries';
 
 class AddBook extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "",
+      genre: "",
+      authorID: ""
+    }
+  }
+
   displayAuthors() {
     const { data, error } = this.props;
     if(data.loading) {
