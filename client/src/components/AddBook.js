@@ -1,4 +1,15 @@
 import React, { Component } from 'react';
+import { gql } from 'apollo-boost';
+
+const getAuthorsQuery = gql`
+{
+  authors {
+    surname
+    titles
+    id
+  }
+}
+`
 
 class AddBook extends Component {
 
