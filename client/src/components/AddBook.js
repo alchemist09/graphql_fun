@@ -17,11 +17,11 @@ class AddBook extends Component {
   displayAuthors() {
     const { data, error } = this.props;
     if(data.loading) {
-      return <p>Loading.......!</p>
+      return <option disabled>Loading Authors.......!</option>
     } 
 
     if(data.error) {
-      return <p>Error, { error }</p>
+      return <option>Error, { error }</option>
     }
 
     return data.authors.map(author => {
