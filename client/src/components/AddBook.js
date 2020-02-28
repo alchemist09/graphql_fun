@@ -20,16 +20,16 @@ class AddBook extends Component {
   }
 
   displayAuthors() {
-    const { data, error } = this.props;
-    if(data.loading) {
+    const { getAuthorsQuery, error } = this.props;
+    if(getAuthorsQuery.loading) {
       return <option disabled>Loading Authors.......!</option>
     } 
 
-    if(data.error) {
+    if(getAuthorsQuery.error) {
       return <option>Error, { error }</option>
     }
 
-    return data.authors.map(author => {
+    return getAuthorsQuery.authors.map(author => {
       return <option key={author.id} value={author.id}>{author.surname}</option>
     })
   }
@@ -54,7 +54,7 @@ class AddBook extends Component {
 
   handleSubmit(evt) {
     evt.preventDefault();
-    this.props.mutate();
+    this.props.addBookMutation();
     console.log(this.state);
   }
 
@@ -84,6 +84,6 @@ class AddBook extends Component {
 }
 
 export default compose(
-  graphql(getAuthorsQuery),
-  graphql(addBookMutation)
+  graphql(getAuthorsQuery, { name: "getAuthorsQuery"}),
+  graphql(addBookMutation, { name: "addBookMutation"})
 )(AddBook);
