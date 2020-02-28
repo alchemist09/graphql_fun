@@ -13,6 +13,7 @@ class AddBook extends Component {
     }
 
     this.handleBookNameChange = this.handleBookNameChange.bind(this);
+    this.handleGenreChange = this.handleGenreChange.bind(this);
   }
 
   displayAuthors() {
@@ -36,6 +37,12 @@ class AddBook extends Component {
     })
   }
 
+  handleGenreChange(evt) {
+    this.setState({
+      genre: evt.target.value
+    })
+  }
+
   render() {
     console.log(this.props);
     return (
@@ -46,7 +53,7 @@ class AddBook extends Component {
         </div>
         <div className="field">
           <label htmlFor="genre">Genre</label>
-          <input type="text" />
+          <input type="text" onChange={this.handleGenreChange} />
         </div>
         <div className="field">
           <label htmlFor="name">Author</label>
