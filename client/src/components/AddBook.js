@@ -11,6 +11,8 @@ class AddBook extends Component {
       genre: "",
       authorID: ""
     }
+
+    this.handleBookNameChange = this.handleBookNameChange.bind(this);
   }
 
   displayAuthors() {
@@ -28,13 +30,19 @@ class AddBook extends Component {
     })
   }
 
+  handleBookNameChange(evt) {
+    this.setState({
+      name: evt.target.value
+    })
+  }
+
   render() {
     console.log(this.props);
     return (
       <form id="add-book">
         <div className="field">
           <label htmlFor="name">Book Name</label>
-          <input type="text" />
+          <input type="text" onChange={this.handleBookNameChange} />
         </div>
         <div className="field">
           <label htmlFor="genre">Genre</label>
