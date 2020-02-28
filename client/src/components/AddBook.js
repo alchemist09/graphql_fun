@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { graphql } from '@apollo/react-hoc';
-import { getAuthorsQuery } from '../queries';
+import { compose } from 'recompose';
+import { getAuthorsQuery, addBookMutation } from '../queries';
 
 class AddBook extends Component {
 
@@ -53,6 +54,7 @@ class AddBook extends Component {
 
   handleSubmit(evt) {
     evt.preventDefault();
+    this.props.mutate();
     console.log(this.state);
   }
 
@@ -81,4 +83,7 @@ class AddBook extends Component {
   }
 }
 
-export default graphql(getAuthorsQuery)(AddBook);
+export default compose(
+  graphql(getAuthorsQuery),
+  graphql(addBookMutation)
+)(AddBook);
