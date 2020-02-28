@@ -29,7 +29,7 @@ class AddBook extends Component {
     }
 
     return data.authors.map(author => {
-      return <option key={author.id} value={author.surname}>{author.surname}</option>
+      return <option key={author.id} value={author.id}>{author.surname}</option>
     })
   }
 
