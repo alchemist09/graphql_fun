@@ -5,6 +5,13 @@ import BookDetail from './BookDetail';
 
 class BookList extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      selected_book: null
+    }
+  }
+
   displayBooks() {
     const { data, error } = this.props;
     if(data.loading) {
