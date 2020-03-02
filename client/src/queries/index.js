@@ -39,9 +39,10 @@ const getBookQuery = gql`
       author {
         id
         surname
+        titles
         books {
           id
-          title
+          name
           genre
         }
       }
