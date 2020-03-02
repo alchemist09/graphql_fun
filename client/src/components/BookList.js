@@ -10,6 +10,14 @@ class BookList extends Component {
     this.state = {
       selected_book: null
     }
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(book_id) {
+    this.setState({
+      selected_book: book_id
+    })
   }
 
   displayBooks() {
@@ -28,7 +36,7 @@ class BookList extends Component {
     
     return data.books.map(book => {
       return (
-        <li key={book.id} onClick={ (evt) => { this.setState({ selected_book: book.id })}}>{book.name}</li>
+        <li key={book.id} onClick={ (evt) => { this.handleClick(book.id, evt) }}>{book.name}</li>
       );
     });
   }
