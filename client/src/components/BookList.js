@@ -28,19 +28,21 @@ class BookList extends Component {
     
     return data.books.map(book => {
       return (
-        <li key={book.id}>{book.name}</li>
+        <li key={book.id} onClick={ (evt) => { this.setState({ selected_book: book.id })}}>{book.name}</li>
       );
     });
   }
 
   render() {
     console.log(this.props);
+    console.log(this.state);
+    const { selected_book } = this.state;
     return (
       <div>
         <ul id="book-list">
           {this.displayBooks()}
         </ul>
-        <BookDetail />
+        <BookDetail bookID={selected_book} />
       </div>
     )
   }
