@@ -28,6 +28,7 @@ code {
 
 #book-list {
   padding: 0;
+  width: 60%;
 }
 
 #book-list li {
@@ -74,4 +75,18 @@ form button {
   padding: 0 10px;
   border-radius: 50%;
   cursor: pointer;
+}
+
+#book-details {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background: #AD1457;
+  padding: 30px;
+  overflow: auto;
+  box-shadow: -2px -3px 5px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  color: #fff;
 }
