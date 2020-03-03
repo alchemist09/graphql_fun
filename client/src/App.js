@@ -11,7 +11,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div className="App">
+      <div id="App">
         <h1>Apollo Client for the GraphQL Server</h1>
         <BookList />
         <AddBook />
