@@ -8,7 +8,7 @@ class BookDetail extends Component {
     const { book } = this.props.data
     if(book) {
       return (
-        <div>
+        <div id="book-details">
           <hr />
           <h2>{book.name}</h2>
           <p>{book.genre}</p>
@@ -35,7 +35,6 @@ class BookDetail extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       this.displayBookDetails()
     )
