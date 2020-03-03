@@ -67,11 +67,9 @@ class AddBook extends Component {
         }
       ]
     });
-    console.log(this.state);
   }
 
   render() {
-    console.log(this.props);
     return (
       <form id="add-book" onSubmit={this.handleSubmit}>
         <div className="field">
