@@ -14,7 +14,8 @@ class BookDetail extends Component {
           <p>{book.genre}</p>
           <p>{book.author.surname}</p>
           <p>{book.author.titles}</p>
-          <ul>
+          <strong>All Books From This Author</strong>
+          <ul className="other-books">
             {
               book.author.books.map(thisBook => {
                 return <li key={thisBook.id}>{thisBook.name}</li>
